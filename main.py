@@ -49,7 +49,7 @@ text_color = "#006A53"
 
 if open_modal:
     st.markdown(f"""
-                <div  style="position: fixed; top:300px; z-index:9999 right:30px; width: 250px; height: 25%; background-color: #f5f5f0; box-shadow: -5px 0 5px rgba(0, 0, 0, 0.2); color: {text_color};">
+                <div  style="position: fixed; top:300px; z-index:9999; right:30px; width: 250px; height: 25%; background-color: #f5f5f0; box-shadow: -5px 0 5px rgba(0, 0, 0, 0.2); color: {text_color};">
                 <p style="font-size: 15px;">How to Use: Using our chatbot is effortless – simply type in your Snowflake-related questions, and it will provide you with precise and up-to-date information from the vast Snowflake documentation.</p> """,unsafe_allow_html=True)
     with st.sidebar:
         st.button("close-info")
