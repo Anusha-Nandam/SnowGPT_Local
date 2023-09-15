@@ -13,4 +13,4 @@ environment = "gcp-starter"
 
 index_name="snowpineidx"
 
-openai_api_key="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"
+# openai_api_key="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"
