@@ -57,8 +57,9 @@ if 'requests' not in st.session_state:
     st.session_state['requests'] = []
     
 
-openai_api_key_container = st.sidebar.empty()                               # Create an empty container to conditionally display the API Key input field
-openai_api_key = openai_api_key_container.text_input('OpenAI API Key')# Get the OpenAI API key from the user
+# openai_api_key_container = st.sidebar.empty()                               # Create an empty container to conditionally display the API Key input field
+# openai_api_key = openai_api_key_container.text_input('OpenAI API Key')# Get the OpenAI API key from the user
+openai_api_key =  st.secrets['open_api_key']
 
 if not openai_api_key:
     with st.sidebar:
