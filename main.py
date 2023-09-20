@@ -4,7 +4,7 @@ from langchain.chat_models import ChatOpenAI
 import streamlit as st
 from utils import *
 from config import *
-from PIL import Image
+# from PIL import Image
 import snowflake.connector
 import openai
 from streamlit_modal import Modal
@@ -18,17 +18,17 @@ from langchain.prompts import (
 
 st.set_page_config(layout="wide")
 
-image = Image.open('SnowGPT.png')
-st.image(image,width=250)
+# image = Image.open('SnowGPT.png')
+# st.image(image,width=250)
 
-# st.markdown(
-#     """
-#     <div style="display: flex; justify-content: center; margin-top: -86px;">
-#     <img src="anblicks.jpg" width="700" />
-#     </div>
-#     """,
-#     unsafe_allow_html=True
-# )
+st.markdown(
+    """
+    <div style="display: flex; justify-content: left ;margin-left: -15px; margin-top: -50px; ">
+    <img src="https://stsnowgptimg.blob.core.windows.net/snowgptimage/SnowGTP.png" width="200" />
+    </div>
+    """,
+    unsafe_allow_html=True
+)
     
 with st.sidebar:
     modal = Modal(key="Demo Key",title=" ")
