@@ -4,6 +4,7 @@ from langchain.chat_models import ChatOpenAI
 import streamlit as st
 from utils import *
 from config import *
+from PIL import Image
 import snowflake.connector
 import openai
 from streamlit_modal import Modal
@@ -17,10 +18,7 @@ from langchain.prompts import (
 
 st.set_page_config(layout="wide")
 
-from PIL import Image
-
 image = Image.open('SnowGPT.png')
-
 st.image(image,width=250)
 
 # st.markdown(
@@ -56,20 +54,17 @@ if 'responses' not in st.session_state:
 if 'requests' not in st.session_state:
     st.session_state['requests'] = []
     
-
-# openai_api_key_container = st.sidebar.empty()                               # Create an empty container to conditionally display the API Key input field
-# openai_api_key = openai_api_key_container.text_input('OpenAI API Key')# Get the OpenAI API key from the user
 openai_api_key =  st.secrets['open_api_key']
 
-if not openai_api_key:
-    with st.sidebar:
-        st.warning('Please enter your OpenAI API key!', icon='⚠️')
+# if not openai_api_key:
+#     with st.sidebar:
+#         st.warning('Please enter your OpenAI API key!', icon='⚠️')
         
-elif is_valid_api_key(openai_api_key):
+if is_valid_api_key(openai_api_key):
     with st.sidebar:
             st.success('API Key is valid! You can proceed.', icon='✅')
             
-    openai_api_key_container.empty() # Hide the openai_api_key input field
+    # openai_api_key_container.empty() # Hide the openai_api_key input field
     
     openai.api_key = openai_api_key
     llm = ChatOpenAI(model_name="gpt-3.5-turbo", openai_api_key=openai_api_key)
