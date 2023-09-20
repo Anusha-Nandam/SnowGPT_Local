@@ -61,8 +61,8 @@ openai_api_key =  st.secrets['open_api_key']
 #         st.warning('Please enter your OpenAI API key!', icon='⚠️')
         
 if is_valid_api_key(openai_api_key):
-    with st.sidebar:
-            st.success('API Key is valid! You can proceed.', icon='✅')
+    # with st.sidebar:
+    #         st.success('API Key is valid! You can proceed.', icon='✅')
             
     # openai_api_key_container.empty() # Hide the openai_api_key input field
     
