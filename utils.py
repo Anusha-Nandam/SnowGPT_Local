@@ -12,16 +12,7 @@ pinecone.init(api_key=api_key, environment=environment)
 index = pinecone.Index(index_name)
 
 # Define Snowflake connection parameters
-conn = {
-    "user"  : snowflake_user,
-    "password": snowflake_password,
-    "account": snowflake_account,
-    "warehouse": snowflake_warehouse,
-    "database": snowflake_database,
-    "schema": snowflake_schema
-}
-# Create a Snowflake connection
-connection = snowflake.connector.connect(**conn)
+
 
 
 
