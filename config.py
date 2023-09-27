@@ -7,7 +7,7 @@ snowflake_schema = "STG"
 stage_name = "snowgpt_s3_stage"
 
 
-query = "SELECT DISTINCT GET_PRESIGNED_URL(@snowgpt_s3_stage, METADATA$FILENAME) FROM @snowgpt_s3_stage"
+# query = "SELECT DISTINCT GET_PRESIGNED_URL(@snowgpt_s3_stage, METADATA$FILENAME) FROM @snowgpt_s3_stage"
 
 api_key = "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"
 environment = "gcp-starter"
