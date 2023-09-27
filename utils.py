@@ -24,7 +24,6 @@ conn = {
 connection = snowflake.connector.connect(**conn)
 
 
-
 # Iterate through query history and insert into history_table  
 def add_query_history(query):
     print(query)
