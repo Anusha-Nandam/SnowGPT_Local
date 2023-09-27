@@ -9,7 +9,7 @@ stage_name = "snowgpt_s3_stage"
 
 # query = "SELECT DISTINCT GET_PRESIGNED_URL(@snowgpt_s3_stage, METADATA$FILENAME) FROM @snowgpt_s3_stage"
 
-api_key = "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"
+api_key="741d647c-da49-4048-9d88-3b56e9e8e7f3"   
 environment = "gcp-starter"
 
 index_name="snowpineidx"
