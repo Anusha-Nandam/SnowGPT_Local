@@ -42,7 +42,8 @@ def fetch_query_history():
     return history
 
 # # Function to check if the API key is valid
-# def is_valid_api_key(openai_api_key):
+def is_valid_api_key(openai_api_key):
+    return True
 #     return openai_api_key and openai_api_key.startswith('sk-') and len(openai_api_key) == 52
 
 def find_match(input):
